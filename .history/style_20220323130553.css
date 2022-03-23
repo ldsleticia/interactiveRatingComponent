@@ -64,9 +64,7 @@
   text-align: center;
 }
 
-.circle.active {
-  background-color: hsl(25, 97%, 53%);
-}
+
 
 .circle:hover{
     border-radius: 50%;

@@ -5,7 +5,7 @@ for (let i = 0; i < circle.length; i++) {
   el.onclick = (e) => {
     const activeCircle = document.querySelectorAll('.circle.active')[0];
     if (activeCircle) {
-      activeCircle.classList.toggle("active");
+      activeCircle.classList.to("active");
     }
     const currentCircle = e.target;
     if (currentCircle !== activeCircle) {

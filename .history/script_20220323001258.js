@@ -2,14 +2,10 @@ const circle = document.querySelectorAll('.circle');
 
 for (let i = 0; i < circle.length; i++) {
   const el = circle[i];
-  el.onclick = (e) => {
-    const activeCircle = document.querySelectorAll('.circle.active')[0];
-    if (activeCircle) {
-      activeCircle.classList.toggle("active");
-    }
-    const currentCircle = e.target;
-    if (currentCircle !== activeCircle) {
-      currentCircle.classList.add("active");
+  el.onclick = () => {
+    for (let j = 0; j < circle.length; j++) {
+      const color = circle[j] === el ? 'hsl(25, 97%, 53%)' : '#262d37';
+      circle[j].style.backgroundColor = color;
     }
   }
 }

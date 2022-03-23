@@ -3,11 +3,19 @@ const circle = document.querySelectorAll('.circle');
 for (let i = 0; i < circle.length; i++) {
   const el = circle[i];
   el.onclick = (e) => {
+    //find the active circle
     const activeCircle = document.querySelectorAll('.circle.active')[0];
+
+    //if it's active, remove `active` class
     if (activeCircle) {
-      activeCircle.classList.toggle("active");
+      activeCircle.classList.remove("active");
     }
+
+    //find the current clicked circle
     const currentCircle = e.target;
+    //if the current clicked circle is different with the active circle
+    //we add the `active` class to the current circle
+    //if they're the same, we should not add the active class
     if (currentCircle !== activeCircle) {
       currentCircle.classList.add("active");
     }
